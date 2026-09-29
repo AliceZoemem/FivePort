@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FIVEPORT legal and privacy information for website visitors and business contacts.">
+<meta name="theme-color" content="#06101b">
+<link rel="icon" type="image/png" href="fiveport_favicon_clean.png">
+<title>FIVEPORT | Legal & Privacy</title>
+<style>
+:root{
+  --bg:#06101b;--bg2:#091725;--panel:#0c1a29;--line:#1b3045;
+  --text:#f4f7fb;--muted:#9aacc0;--blue:#168cff;--cyan:#25d9ff;
+  --max:1080px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:
+  radial-gradient(circle at 80% 12%,rgba(22,140,255,.13),transparent 28%),
+  linear-gradient(150deg,#081522,#06101b 55%,#0a2034);
+  color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6
+}
+a{color:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+header{
+  position:sticky;top:0;z-index:10;background:rgba(6,16,27,.82);
+  backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)
+}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img{display:block;width:158px;height:auto;object-fit:contain}
+.nav-back{padding:10px 16px;border:1px solid rgba(37,217,255,.35);border-radius:999px;
+  color:#eaf8ff;text-decoration:none;font-size:13px;font-weight:700;transition:.2s}
+.nav-back:hover{background:rgba(37,217,255,.09);border-color:var(--cyan)}
+main{padding:86px 0 100px}
+.hero{position:relative;padding:0 0 42px;border-bottom:1px solid rgba(255,255,255,.08)}
+.kicker{display:flex;align-items:center;gap:10px;color:#69dfff;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.kicker:before{content:"";width:28px;height:1px;background:var(--cyan)}
+h1{font-size:clamp(42px,6.5vw,72px);line-height:.98;margin:20px 0 22px;letter-spacing:-.055em}
+h1 span{background:linear-gradient(90deg,#fff,#65bdff,#25d9ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro{font-size:18px;color:#b6c5d6;max-width:760px;margin:0}
+.content{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;margin-top:34px;align-items:start}
+.toc{position:sticky;top:100px;padding:20px;border:1px solid rgba(140,180,215,.13);border-radius:18px;background:rgba(12,26,41,.72)}
+.toc-label{font-size:10px;color:#69dfff;letter-spacing:.16em;font-weight:800;text-transform:uppercase;margin:0 0 12px}
+.toc a{display:block;padding:8px 0;color:#b6c5d6;font-size:13px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.055)}
+.toc a:last-child{border-bottom:0}.toc a:hover{color:#fff}
+.sections{display:grid;gap:16px}
+.panel{padding:28px 30px;border:1px solid rgba(140,180,215,.14);border-radius:22px;
+  background:linear-gradient(145deg,rgba(13,29,45,.94),rgba(7,18,30,.94));}
+.panel h2{font-size:20px;line-height:1.25;margin:0 0 12px;letter-spacing:-.02em}
+.panel p{color:var(--muted);margin:0 0 14px;font-size:14px}
+.panel p:last-child{margin-bottom:0}
+.panel a{color:#8fe9ff;text-decoration:underline;text-underline-offset:3px}
+.panel a:hover{color:#fff}
+.note{display:flex;gap:13px;align-items:flex-start;margin-top:20px;padding:15px 17px;border:1px solid rgba(37,217,255,.18);
+  border-radius:14px;background:linear-gradient(135deg,rgba(22,140,255,.09),rgba(37,217,255,.035))}
+.note-icon{width:28px;height:28px;flex:0 0 28px;display:grid;place-items:center;border-radius:9px;background:rgba(37,217,255,.1);color:#69dfff;font-size:14px;font-weight:800}
+.note p{margin:0;color:#b6c5d6;font-size:13px}
+.placeholder{color:#d8e5f2;font-weight:650}
+.back-link{display:inline-flex;align-items:center;gap:9px;margin-top:28px;color:#8fe9ff;text-decoration:none;font-size:13px;font-weight:700}
+.back-link:hover{color:#fff}
+footer{padding:28px 0 34px;border-top:1px solid rgba(255,255,255,.07);color:#8092a7}
+.footer{display:flex;justify-content:space-between;align-items:center;gap:22px}
+.footer-logo{width:132px;height:auto;display:block;object-fit:contain}
+.footer-meta{font-size:12px;text-align:right}
+.footer-meta a{color:#a7c4d8;text-decoration:none}.footer-meta a:hover{color:#fff}
+@media(max-width:760px){
+  main{padding:64px 0 76px}.content{grid-template-columns:1fr}.toc{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
+  .toc-label{grid-column:1/-1}.panel{padding:24px}
+}
+@media(max-width:560px){
+  .container{width:calc(100% - 28px)}.nav{height:68px}.logo img{width:132px}
+  h1{font-size:clamp(38px,12vw,54px)}.intro{font-size:16px}
+  .toc{grid-template-columns:1fr 1fr}.footer{flex-direction:column;align-items:flex-start}.footer-meta{text-align:left}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="FIVEPORT home">
+      <img src="images/fiveport_logo_white_highres.png" alt="FIVEPORT">
+    </a>
+    <a class="nav-back" href="index.html">Back to website <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero">
+      <div class="kicker">Legal / Privacy</div>
+      <h1>Legal information<span>.</span></h1>
+      <p class="intro">Information for visitors and business contacts. This page outlines the current website setup and identifies the legal details and privacy information to be completed before publication.</p>
+    </section>
+
+    <div class="content">
+      <aside class="toc" aria-label="On this page">
+        <p class="toc-label">On this page</p>
+        <a href="#contact">Contact details</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#website">Website information</a>
+      </aside>
+
+      <div class="sections">
+        <section class="panel" id="contact">
+          <h2>Contact details</h2>
+          <p><strong class="placeholder">FIVEPORT</strong><br>Turin, Italy<br><a href="mailto:fabio@fiveport.com">fabio@fiveport.com</a></p>
+        </section>
+
+        <section class="panel" id="privacy">
+          <h2>Privacy</h2>
+          <p>This website currently provides no contact form or user account area. Visitors can contact FIVEPORT by email using the address shown on this page. Any personal data included in email correspondence may be processed to respond to enquiries and manage the related business communication.</p>
+          <p>Before publication, this section should be completed with a privacy notice identifying the data controller, purposes and legal bases of processing, data retention periods, recipients or service providers, any transfers outside the relevant jurisdictions, and the rights available to data subjects, including how to exercise them.</p>
+        </section>
+
+        <section class="panel" id="website">
+          <h2>Website information</h2>
+          <p>Before launch, complete this section with the applicable company and website details, including the registered legal name, registered office, VAT number, company registration information and hosting provider.</p>
+          <p>Any cookies, analytics tools or other technologies used to store or access information on visitors’ devices should also be assessed and described where required. No statement about the use of cookies or analytics should be published until the actual website configuration has been checked.</p>
+        </section>
+      </div>
+    </div>
+    <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Back to FIVEPORT</a>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer">
+    <a href="index.html" aria-label="FIVEPORT home"><img class="footer-logo" src="images/fiveport_logo_white_highres.png" alt="FIVEPORT"></a>
+    <div class="footer-meta">FIVEPORT · Turin, Italy · <a href="mailto:fabio@fiveport.com">fabio@fiveport.com</a></div>
+  </div>
+</footer>
+</body>
+</html>
