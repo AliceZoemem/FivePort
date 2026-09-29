@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FIVEPORT — Technology sourcing, commercial development and distribution for European B2B markets.">
+<title>FIVEPORT | Connecting Technology with European Markets</title>
+<link rel="icon" type="image/png" href="images/fiveport_favicon_clean.png">
+<style>
+:root{
+  --bg:#06101b;--bg2:#091725;--panel:#0c1a29;--line:#1b3045;
+  --text:#f4f7fb;--muted:#9aacc0;--blue:#168cff;--cyan:#25d9ff;
+  --max:1160px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{position:fixed;z-index:20;inset:0 0 auto;background:rgba(6,16,27,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-mark{width:35px;height:35px;object-fit:contain}
+.logo-wordmark{display:block;width:158px;height:auto;object-fit:contain}
+.hero-wordmark{display:block;width:150px;height:auto;margin-left:auto}
+.hero-symbol{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:min(72%,330px);height:auto;object-fit:contain;filter:drop-shadow(0 0 28px rgba(37,217,255,.18))}
+.hero-logo-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:80px 48px 72px;z-index:2}.hero-logo{display:block;width:min(88%,430px);height:auto;max-height:220px;object-fit:contain;filter:drop-shadow(0 0 24px rgba(37,217,255,.12))}
+.brand-name{color:#f4f7fb}.brand-name::after{content:""}.logo .brand-name{font-weight:800;letter-spacing:.08em}
+.navlinks{display:flex;gap:28px;font-size:14px;color:#b5c5d7}
+.navlinks a:hover{color:#fff}
+.nav-cta{padding:10px 16px;border:1px solid rgba(37,217,255,.35);border-radius:999px}
+.hero{min-height:850px;padding:170px 0 100px;position:relative;overflow:hidden;background:
+radial-gradient(circle at 75% 30%,rgba(22,140,255,.18),transparent 30%),
+radial-gradient(circle at 25% 15%,rgba(37,217,255,.08),transparent 25%),
+linear-gradient(180deg,#081522,#06101b)}
+.hero:before{content:"";position:absolute;inset:0;opacity:.13;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.eyebrow,.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.18em;font-weight:800;color:#69dfff}
+.eyebrow{display:flex;gap:10px;align-items:center}.eyebrow:before{content:"";width:28px;height:1px;background:var(--cyan)}
+h1{font-size:clamp(50px,6.4vw,82px);line-height:.98;letter-spacing:-.055em;margin:22px 0}
+h1 span{background:linear-gradient(90deg,#fff,#65bdff,#25d9ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:19px;color:#b6c5d6;max-width:670px}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}
+.btn{padding:14px 20px;border-radius:12px;border:1px solid var(--line);font-weight:750}
+.btn.primary{border:0;background:linear-gradient(135deg,#087cf0,#15bde9)}
+.btn.secondary{background:rgba(255,255,255,.025)}
+.hero-card{height:480px;border:1px solid rgba(130,180,225,.18);border-radius:30px;background:linear-gradient(145deg,rgba(15,34,53,.9),rgba(5,13,22,.96));position:relative;overflow:hidden;box-shadow:0 35px 90px rgba(0,0,0,.35)}
+.hero-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,rgba(37,217,255,.18),transparent 29%)}
+.network-label{position:absolute;top:30px;left:32px;right:32px;text-align:right;font-size:13px;font-weight:850;letter-spacing:.22em;color:#f4f7fb}.network-label span{color:#25d9ff}.network{position:absolute;inset:72px 25px 45px}
+.network svg{width:100%;height:100%;filter:drop-shadow(0 0 20px rgba(37,217,255,.25))}
+.card-meta{position:absolute;bottom:24px;left:26px;right:26px;display:flex;justify-content:space-between;color:#7d91a7;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.delivery-highlight{margin-top:34px;padding:22px 24px;border:1px solid rgba(37,217,255,.18);border-radius:18px;background:linear-gradient(135deg,rgba(22,140,255,.09),rgba(37,217,255,.035));display:flex;gap:16px;align-items:flex-start}.delivery-icon{width:38px;height:38px;flex:0 0 38px;border-radius:11px;display:grid;place-items:center;background:rgba(37,217,255,.1);border:1px solid rgba(37,217,255,.2);color:#5fdcff;font-size:16px}.delivery-highlight strong{display:block;margin-bottom:4px;font-size:15px}.delivery-highlight p{margin:0;color:var(--muted);font-size:14px}.availability{max-width:650px;margin:28px auto 0;padding:20px 22px;border:1px solid rgba(37,217,255,.18);border-radius:18px;background:linear-gradient(135deg,rgba(22,140,255,.08),rgba(37,217,255,.035));display:flex;gap:16px;align-items:flex-start;text-align:left}.availability-icon{width:38px;height:38px;flex:0 0 38px;border-radius:11px;display:grid;place-items:center;background:rgba(37,217,255,.1);border:1px solid rgba(37,217,255,.2);color:#5fdcff;font-size:17px;font-weight:800}.availability strong{display:block;margin-bottom:4px;font-size:15px}.availability p{margin:0;color:var(--muted);font-size:14px}section{padding:105px 0}
+.section-head{max-width:760px;margin-bottom:46px}
+h2{font-size:clamp(34px,4.2vw,52px);line-height:1.04;letter-spacing:-.04em;margin:12px 0 15px}
+.section-head p{color:var(--muted);font-size:18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.panel{padding:32px;border-radius:26px;border:1px solid rgba(140,180,215,.13);background:linear-gradient(145deg,#0d1d2d,#07121e)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.card{min-height:205px;padding:27px;border-radius:20px;border:1px solid rgba(140,180,215,.12);background:linear-gradient(160deg,#0e1d2c,#091522)}
+.icon{width:43px;height:43px;border-radius:12px;display:grid;place-items:center;margin-bottom:22px;background:rgba(22,140,255,.12);border:1px solid rgba(37,217,255,.18);color:#5fdcff;font-size:11px;font-weight:800}
+.card h3{margin:0 0 9px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
+.step{display:grid;grid-template-columns:43px 1fr;gap:17px;padding:19px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.step:last-child{border-bottom:0}
+.num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#0b2945;color:#64d5ff;font-size:11px;font-weight:800}
+.step h3{margin:0 0 4px;font-size:16px}.step p{margin:0;color:var(--muted);font-size:14px}
+.band{background:linear-gradient(100deg,#071522,#0a2034,#071522);border-top:1px solid rgba(37,217,255,.1);border-bottom:1px solid rgba(37,217,255,.1)}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.tag{padding:9px 12px;border:1px solid #1a3046;border-radius:999px;background:#0a1725;color:#adbed0;font-size:12px}
+.contact{text-align:center;max-width:820px}
+footer{padding:48px 0 32px;border-top:1px solid rgba(255,255,255,.07);color:#8092a7}
+.footer{display:flex;justify-content:space-between;gap:25px;align-items:center}.small{font-size:12px}.footer-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}.footer-links a{color:#a9bbce}.footer-links a:hover{color:#fff}
+@media(max-width:900px){.navlinks{display:none}.hero-grid,.split{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.hero{padding-top:135px}}
+@media(max-width:560px){.logo-wordmark{width:132px}.hero-logo-wrap{padding:70px 28px 60px}.hero-logo{width:min(92%,340px);max-height:170px}.container{width:calc(100% - 26px)}.cards{grid-template-columns:1fr}.hero-card{height:370px}section{padding:78px 0}.footer{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container nav">
+  <a href="#top" class="logo" aria-label="FIVEPORT home"><img class="logo-wordmark" src="images/fiveport_logo_highres.png" alt="FIVEPORT"></a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#dc">Data Center</a><a href="#manufacturers">Manufacturers</a><a href="#buyers">Buyers</a>
+  </div>
+  <a href="#contact" class="nav-cta">Contact</a>
+</div>
+</nav>
+
+<main id="top">
+<section class="hero">
+<div class="container hero-grid">
+  <div>
+    <div class="eyebrow">Technology sourcing · Commercial development · Distribution</div>
+    <h1>Connecting <span>technology</span> with European markets.</h1>
+    <p class="lead">FIVEPORT is an Italian B2B initiative focused on technology sourcing, commercial development and distribution for European markets.</p>
+    <div class="actions">
+      <a class="btn primary" href="#manufacturers">For Manufacturers</a>
+      <a class="btn secondary" href="#buyers">For Buyers</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="network-label">FIVEPORT <span>BRAND</span></div>
+    <div class="hero-logo-wrap"><img class="hero-logo" src="images/fiveport_logo_highres.png" alt="FIVEPORT logo"></div>
+    <div class="card-meta"><span>FIVEPORT</span><span>CONNECTING MARKETS</span></div>
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="container split">
+  <div class="section-head">
+    <div class="kicker">About FIVEPORT</div>
+    <h2>Building bridges between manufacturers and European markets.</h2>
+    <p>FIVEPORT works with selected technology manufacturers to develop commercial opportunities across Europe. We combine product sourcing, market development and local commercial coordination to connect manufacturers with qualified B2B customers.</p>
+  </div>
+  <div class="panel">
+    <div class="step"><div class="num">01</div><div><h3>Source</h3><p>Identify selected technologies and manufacturers with European market potential.</p></div></div>
+    <div class="step"><div class="num">02</div><div><h3>Position</h3><p>Translate product capabilities into clear commercial and technical propositions.</p></div></div>
+    <div class="step"><div class="num">03</div><div><h3>Connect</h3><p>Develop relationships with European integrators, installers and professional buyers.</p></div></div>
+    <div class="step"><div class="num">04</div><div><h3>Develop</h3><p>Coordinate commercial opportunities and build long-term manufacturer relationships.</p></div></div>
+  </div>
+</div>
+</section>
+
+<section id="dc" class="band">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker">FIVEPORT · Data Center</div>
+    <h2>Components & infrastructure for data center environments.</h2>
+    <p>Our current activity focuses on selected technologies supporting power distribution, monitoring, sensing and critical infrastructure.</p>
+  </div>
+  <div class="cards">
+    <article class="card"><div class="icon">PDU</div><h3>Smart / Metered PDU</h3><p>Power distribution and energy measurement for racks.</p></article>
+    <article class="card"><div class="icon">ENV</div><h3>Environmental Monitoring</h3><p>Temperature, humidity, doors, smoke, vibration and related sensing.</p></article>
+    <article class="card"><div class="icon">LD</div><h3>Leak Detection</h3><p>Sensors and cables for water leak detection.</p></article>
+    <article class="card"><div class="icon">ATS</div><h3>ATS & Power Monitoring</h3><p>Continuity and electrical monitoring solutions.</p></article>
+  </div>
+  <div class="tags"><span class="tag">Liquid-cooling components</span><span class="tag">Critical infrastructure</span><span class="tag">B2B technology</span></div>
+</div>
+</section>
+
+<section id="manufacturers">
+<div class="container split">
+  <div>
+    <div class="kicker">For Manufacturers</div>
+    <h2>Looking to expand your presence in Europe?</h2>
+    <p class="lead" style="font-size:17px">FIVEPORT works with technology manufacturers looking to develop new B2B opportunities in European markets.</p>
+    <div class="delivery-highlight">
+      <div class="delivery-icon">↗</div>
+      <div><strong>Shorter route to European customers.</strong><p>By coordinating sourcing, commercial communication and orders through one local partner, FIVEPORT can help reduce unnecessary delays between manufacturer and buyer.</p></div>
+    </div>
+    <div class="tags"><span class="tag">European Market Development</span><span class="tag">B2B Access</span><span class="tag">Commercial Development</span><span class="tag">Order Coordination</span></div>
+  </div>
+  <div class="panel">
+    <div class="step"><div class="num">01</div><div><h3>Market introduction</h3><p>Position selected products for European B2B audiences.</p></div></div>
+    <div class="step"><div class="num">02</div><div><h3>Commercial development</h3><p>Identify and approach relevant integrators, installers and buyers.</p></div></div>
+    <div class="step"><div class="num">03</div><div><h3>Customer communication</h3><p>Coordinate product information, quotations and commercial conversations.</p></div></div>
+    <div class="step"><div class="num">04</div><div><h3>Faster order flow</h3><p>Coordinate information, quotations and order requirements to keep the path from manufacturer to European customer efficient.</p></div></div>
+    <div class="step"><div class="num">05</div><div><h3>Long-term relationships</h3><p>Develop repeat opportunities and sustainable manufacturer partnerships.</p></div></div>
+  </div>
+</div>
+</section>
+
+<section id="buyers" class="band">
+<div class="container split">
+  <div class="section-head">
+    <div class="kicker">For Buyers</div>
+    <h2>Selected technologies for critical infrastructure.</h2>
+    <p>FIVEPORT connects European buyers with selected manufacturers of data center and infrastructure technologies.</p>
+    <div class="delivery-highlight">
+      <div class="delivery-icon">⚡</div>
+      <div><strong>Simplified access to selected products.</strong><p>FIVEPORT coordinates product selection, quotation and order requirements through a single commercial point of contact.</p></div>
+    </div>
+    <a class="btn primary" href="#contact" style="display:inline-block;margin-top:18px">Talk to FIVEPORT</a>
+  </div>
+  <div class="cards" style="grid-template-columns:1fr 1fr">
+    <article class="card"><h3>Data Center Integrators</h3><p>Infrastructure and technology integration requirements.</p></article>
+    <article class="card"><h3>Installers</h3><p>Electrical, monitoring and critical infrastructure projects.</p></article>
+    <article class="card"><h3>Facility & Critical Infrastructure</h3><p>Operational technology requirements for technical environments.</p></article>
+    <article class="card"><h3>Industrial & Telecom</h3><p>Professional buyers seeking credible component solutions.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container contact">
+  <div class="kicker">Get in touch</div>
+  <h2>Let's build the next connection.</h2>
+  <p class="section-head" style="margin:0 auto;color:var(--muted);font-size:18px">For manufacturers interested in European market development or B2B buyers looking for selected technology solutions, contact FIVEPORT.</p>
+  <div class="availability">
+    <div class="availability-icon">@</div>
+    <div><strong>Direct access to FIVEPORT.</strong><p>We are available by email whenever you need us, with a direct and responsive point of contact for manufacturers and buyers.</p></div>
+  </div>
+  <div class="actions" style="justify-content:center">
+    <a class="btn primary" href="mailto:fabio@fiveport.com">fabio@fiveport.com</a>
+  </div>
+  <p class="small" style="margin-top:18px;color:#73869b">FIVEPORT · Turin, Italy</p>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer">
+  <div><div class="logo"><img class="logo-wordmark" src="images/fiveport_logo_highres.png" alt="FIVEPORT"></div><div class="small" style="margin-top:6px">Technology sourcing · Commercial development · Distribution</div><div class="footer-links small"><a href="legal.html">Legal / Privacy</a><a href="#contact">Contact details</a></div></div>
+  <div class="small">© 2026 FIVEPORT · Turin, Italy</div>
+</div>
+</footer>
+</body>
+</html>
